@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаСформировать" id="20">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаСформировать</CommandName>
+				<ExtendedTooltip name="ФормаКомандаСформироватьРасширеннаяПодсказка" id="21"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПериод" id="68">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<InputField name="НачалоПериода" id="108">
+					<DataPath>Объект.НачалоПериода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период с</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="110"/>
+				</InputField>
+				<InputField name="КонецПериода" id="111">
+					<DataPath>Объект.КонецПериода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КонецПериодаКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="113"/>
+				</InputField>
+				<Button name="ВыбратьПериод" id="70">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Command.ВыбратьПериод</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ВыбратьПериодРасширеннаяПодсказка" id="71"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтбор" id="15">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<Table name="ТаблицаДокументов" id="22">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТаблицаДокументов</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаДокументовКонтекстноеМеню" id="23"/>
+					<AutoCommandBar name="ТаблицаДокументовКоманднаяПанель" id="24">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаДокументовРасширеннаяПодсказка" id="25"/>
+					<SearchStringAddition name="ТаблицаДокументовСтрокаПоиска" id="72">
+						<AdditionSource>
+							<Item>ТаблицаДокументов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовСтрокаПоискаКонтекстноеМеню" id="73"/>
+						<ExtendedTooltip name="ТаблицаДокументовСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаДокументовСостояниеПросмотра" id="75">
+						<AdditionSource>
+							<Item>ТаблицаДокументов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовСостояниеПросмотраКонтекстноеМеню" id="76"/>
+						<ExtendedTooltip name="ТаблицаДокументовСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаДокументовУправлениеПоиском" id="78">
+						<AdditionSource>
+							<Item>ТаблицаДокументов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовУправлениеПоискомКонтекстноеМеню" id="79"/>
+						<ExtendedTooltip name="ТаблицаДокументовУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="ТаблицаДокументовПометка" id="50">
+							<DataPath>ТаблицаДокументов.Пометка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовПометкаКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ТаблицаДокументовПометкаРасширеннаяПодсказка" id="52"/>
+						</CheckBoxField>
+						<PictureField name="ТаблицаДокументовКартинка" id="53">
+							<DataPath>ТаблицаДокументов.Картинка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ТаблицаДокументовКартинкаКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ТаблицаДокументовКартинкаРасширеннаяПодсказка" id="55"/>
+						</PictureField>
+						<InputField name="ТаблицаДокументовИмя" id="26">
+							<DataPath>ТаблицаДокументов.Имя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовИмяКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ТаблицаДокументовИмяРасширеннаяПодсказка" id="28"/>
+						</InputField>
+						<InputField name="ТаблицаДокументовСиноним" id="29">
+							<DataPath>ТаблицаДокументов.Синоним</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовСинонимКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ТаблицаДокументовСинонимРасширеннаяПодсказка" id="31"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="ТаблицаДокументовДвижения" id="40">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Items.ТаблицаДокументов.CurrentData.Движения</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаДокументовДвиженияКонтекстноеМеню" id="41"/>
+					<AutoCommandBar name="ТаблицаДокументовДвиженияКоманднаяПанель" id="42">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаДокументовДвиженияРасширеннаяПодсказка" id="43"/>
+					<SearchStringAddition name="ТаблицаДокументовДвиженияСтрокаПоиска" id="81">
+						<AdditionSource>
+							<Item>ТаблицаДокументовДвижения</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовДвиженияСтрокаПоискаКонтекстноеМеню" id="82"/>
+						<ExtendedTooltip name="ТаблицаДокументовДвиженияСтрокаПоискаРасширеннаяПодсказка" id="83"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаДокументовДвиженияСостояниеПросмотра" id="84">
+						<AdditionSource>
+							<Item>ТаблицаДокументовДвижения</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовДвиженияСостояниеПросмотраКонтекстноеМеню" id="85"/>
+						<ExtendedTooltip name="ТаблицаДокументовДвиженияСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаДокументовДвиженияУправлениеПоиском" id="87">
+						<AdditionSource>
+							<Item>ТаблицаДокументовДвижения</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаДокументовДвиженияУправлениеПоискомКонтекстноеМеню" id="88"/>
+						<ExtendedTooltip name="ТаблицаДокументовДвиженияУправлениеПоискомРасширеннаяПодсказка" id="89"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">ТаблицаДокументовДвиженияПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<CheckBoxField name="ТаблицаДокументовДвиженияПометка" id="47">
+							<DataPath>Items.ТаблицаДокументов.CurrentData.Движения.Пометка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТаблицаДокументовДвиженияПометкаКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ТаблицаДокументовДвиженияПометкаРасширеннаяПодсказка" id="49"/>
+						</CheckBoxField>
+						<PictureField name="ТаблицаДокументовДвиженияКартинка" id="56">
+							<DataPath>Items.ТаблицаДокументов.CurrentData.Движения.Картинка</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ТаблицаДокументовДвиженияКартинкаКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ТаблицаДокументовДвиженияКартинкаРасширеннаяПодсказка" id="58"/>
+						</PictureField>
+						<InputField name="ТаблицаДокументовДвиженияИмя" id="44">
+							<DataPath>Items.ТаблицаДокументов.CurrentData.Движения.Имя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументовДвиженияИмяКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ТаблицаДокументовДвиженияИмяРасширеннаяПодсказка" id="46"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРезультат" id="106">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="107"/>
+			<ChildItems>
+				<SpreadSheetDocumentField name="ТабличныйДокумент" id="17">
+					<DataPath>ТабличныйДокумент</DataPath>
+					<VerticalScrollBar>true</VerticalScrollBar>
+					<HorizontalScrollBar>true</HorizontalScrollBar>
+					<ContextMenu name="ТабличныйДокументКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТабличныйДокументРасширеннаяПодсказка" id="19"/>
+				</SpreadSheetDocumentField>
+				<Table name="ТаблицаРезультат" id="90">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТаблицаРезультат</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаРезультатКонтекстноеМеню" id="91"/>
+					<AutoCommandBar name="ТаблицаРезультатКоманднаяПанель" id="92">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаРезультатРасширеннаяПодсказка" id="93"/>
+					<SearchStringAddition name="ТаблицаРезультатСтрокаПоиска" id="94">
+						<AdditionSource>
+							<Item>ТаблицаРезультат</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаРезультатСтрокаПоискаКонтекстноеМеню" id="95"/>
+						<ExtendedTooltip name="ТаблицаРезультатСтрокаПоискаРасширеннаяПодсказка" id="96"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаРезультатСостояниеПросмотра" id="97">
+						<AdditionSource>
+							<Item>ТаблицаРезультат</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаРезультатСостояниеПросмотраКонтекстноеМеню" id="98"/>
+						<ExtendedTooltip name="ТаблицаРезультатСостояниеПросмотраРасширеннаяПодсказка" id="99"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаРезультатУправлениеПоиском" id="100">
+						<AdditionSource>
+							<Item>ТаблицаРезультат</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаРезультатУправлениеПоискомКонтекстноеМеню" id="101"/>
+						<ExtendedTooltip name="ТаблицаРезультатУправлениеПоискомРасширеннаяПодсказка" id="102"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ТаблицаРезультатСсылка" id="103">
+							<DataPath>ТаблицаРезультат.Ссылка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаРезультатСсылкаКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ТаблицаРезультатСсылкаРасширеннаяПодсказка" id="105"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПроверкаПроведенныхДокументовБезДвижений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТабличныйДокумент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаДокументов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Синоним" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синоним</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Движения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Движения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПолноеИмя" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<AdditionalColumns table="ТаблицаДокументов.Движения">
+					<Column name="Имя" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Пометка" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пометка</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Картинка" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Картинка</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8ui:Picture</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ПолноеИмя" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Полное имя</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаРезультат" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтандартныйПериодФормы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартный период формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСформировать</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьПериод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьПериод</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
