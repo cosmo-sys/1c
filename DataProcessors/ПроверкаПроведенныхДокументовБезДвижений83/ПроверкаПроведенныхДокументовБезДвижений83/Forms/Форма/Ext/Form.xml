@@ -6,7 +6,24 @@
 			<Button name="ФормаКомандаСформировать" id="20">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.КомандаСформировать</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Найти</v8:content>
+					</v8:item>
+				</Title>
 				<ExtendedTooltip name="ФормаКомандаСформироватьРасширеннаяПодсказка" id="21"/>
+			</Button>
+			<Button name="ФормаКомандаПровестиДокументы" id="114">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаПровестиДокументы</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Провести</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаПровестиДокументыРасширеннаяПодсказка" id="115"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -226,59 +243,129 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="107"/>
 			<ChildItems>
-				<SpreadSheetDocumentField name="ТабличныйДокумент" id="17">
-					<DataPath>ТабличныйДокумент</DataPath>
-					<VerticalScrollBar>true</VerticalScrollBar>
-					<HorizontalScrollBar>true</HorizontalScrollBar>
-					<ContextMenu name="ТабличныйДокументКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="ТабличныйДокументРасширеннаяПодсказка" id="19"/>
-				</SpreadSheetDocumentField>
-				<Table name="ТаблицаРезультат" id="90">
-					<Representation>List</Representation>
-					<AutoInsertNewRow>true</AutoInsertNewRow>
-					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
-					<FileDragMode>AsFile</FileDragMode>
-					<DataPath>ТаблицаРезультат</DataPath>
-					<RowFilter xsi:nil="true"/>
-					<ContextMenu name="ТаблицаРезультатКонтекстноеМеню" id="91"/>
-					<AutoCommandBar name="ТаблицаРезультатКоманднаяПанель" id="92">
-						<Autofill>false</Autofill>
-					</AutoCommandBar>
-					<ExtendedTooltip name="ТаблицаРезультатРасширеннаяПодсказка" id="93"/>
-					<SearchStringAddition name="ТаблицаРезультатСтрокаПоиска" id="94">
-						<AdditionSource>
-							<Item>ТаблицаРезультат</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="ТаблицаРезультатСтрокаПоискаКонтекстноеМеню" id="95"/>
-						<ExtendedTooltip name="ТаблицаРезультатСтрокаПоискаРасширеннаяПодсказка" id="96"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="ТаблицаРезультатСостояниеПросмотра" id="97">
-						<AdditionSource>
-							<Item>ТаблицаРезультат</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="ТаблицаРезультатСостояниеПросмотраКонтекстноеМеню" id="98"/>
-						<ExtendedTooltip name="ТаблицаРезультатСостояниеПросмотраРасширеннаяПодсказка" id="99"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="ТаблицаРезультатУправлениеПоиском" id="100">
-						<AdditionSource>
-							<Item>ТаблицаРезультат</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="ТаблицаРезультатУправлениеПоискомКонтекстноеМеню" id="101"/>
-						<ExtendedTooltip name="ТаблицаРезультатУправлениеПоискомРасширеннаяПодсказка" id="102"/>
-					</SearchControlAddition>
+				<UsualGroup name="ГруппаТабличныйДокумент" id="120">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа табличный документ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа табличный документ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТабличныйДокументРасширеннаяПодсказка" id="121"/>
 					<ChildItems>
-						<InputField name="ТаблицаРезультатСсылка" id="103">
-							<DataPath>ТаблицаРезультат.Ссылка</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ТаблицаРезультатСсылкаКонтекстноеМеню" id="104"/>
-							<ExtendedTooltip name="ТаблицаРезультатСсылкаРасширеннаяПодсказка" id="105"/>
-						</InputField>
+						<CommandBar name="ПанельТабличногоДокумента" id="116">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель табличного документа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель табличного документа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ПанельТабличногоДокументаРасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<Button name="Печать" id="118">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Print</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="119"/>
+								</Button>
+								<Button name="Сохранить" id="122">
+									<Type>CommandBarButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Item.ТабличныйДокумент.StandardCommand.Save</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="123"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<SpreadSheetDocumentField name="ТабличныйДокумент" id="17">
+							<DataPath>ТабличныйДокумент</DataPath>
+							<VerticalScrollBar>true</VerticalScrollBar>
+							<HorizontalScrollBar>true</HorizontalScrollBar>
+							<ContextMenu name="ТабличныйДокументКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ТабличныйДокументРасширеннаяПодсказка" id="19"/>
+						</SpreadSheetDocumentField>
 					</ChildItems>
-				</Table>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТаблица" id="124">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа таблица</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа таблица</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТаблицаРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<Table name="ТаблицаРезультат" id="90">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТаблицаРезультат</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаРезультатКонтекстноеМеню" id="91"/>
+							<AutoCommandBar name="ТаблицаРезультатКоманднаяПанель" id="92">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаРезультатРасширеннаяПодсказка" id="93"/>
+							<SearchStringAddition name="ТаблицаРезультатСтрокаПоиска" id="94">
+								<AdditionSource>
+									<Item>ТаблицаРезультат</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРезультатСтрокаПоискаКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="ТаблицаРезультатСтрокаПоискаРасширеннаяПодсказка" id="96"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаРезультатСостояниеПросмотра" id="97">
+								<AdditionSource>
+									<Item>ТаблицаРезультат</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРезультатСостояниеПросмотраКонтекстноеМеню" id="98"/>
+								<ExtendedTooltip name="ТаблицаРезультатСостояниеПросмотраРасширеннаяПодсказка" id="99"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаРезультатУправлениеПоиском" id="100">
+								<AdditionSource>
+									<Item>ТаблицаРезультат</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаРезультатУправлениеПоискомКонтекстноеМеню" id="101"/>
+								<ExtendedTooltip name="ТаблицаРезультатУправлениеПоискомРасширеннаяПодсказка" id="102"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаРезультатСсылка" id="103">
+									<DataPath>ТаблицаРезультат.Ссылка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаРезультатСсылкаКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="ТаблицаРезультатСсылкаРасширеннаяПодсказка" id="105"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -288,6 +375,10 @@
 				<v8:Type>cfg:ExternalDataProcessorObject.ПроверкаПроведенныхДокументовБезДвижений</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.КонецПериода</Field>
+				<Field>Объект.НачалоПериода</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="ТабличныйДокумент" id="4">
 			<Title>
@@ -518,6 +609,21 @@
 			</ToolTip>
 			<Action>ВыбратьПериод</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаПровестиДокументы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда провести документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести найденные документы без движений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПровестиДокументы</Action>
 		</Command>
 	</Commands>
 </Form>
